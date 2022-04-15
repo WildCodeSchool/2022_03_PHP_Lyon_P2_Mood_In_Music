@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Genre : {{ music.musical_genre_id }}</h1>
+
+    <h2>{{ music.title }} by {{ music.author}}</h2>
+
+    <p>{{ music.source }}</p>
+
+
+    <a href="/musics">Back</a>
+{% endblock %}

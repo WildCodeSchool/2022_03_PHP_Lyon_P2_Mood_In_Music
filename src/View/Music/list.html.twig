@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<main class="container">
+<table class="table table-success table-hover"> 
+    <h1 class="text-center">WELCOME TO MOOD IN MUSIC</h1>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Source</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for musical in musicals %}
+                <tr>
+                    <td>{{ musical.title }}</td>
+                    <td> By {{ musical.author}} </td>
+                    <td> Source : {{ musical.source}} </td>
+                    <td>{{ musical.genre_name }}</td>
+                </tr>
+            {% endfor %} 
+        </tbody>
+ </table>
+</main>
+{% endblock %}
