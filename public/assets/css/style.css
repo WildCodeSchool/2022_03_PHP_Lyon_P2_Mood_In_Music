@@ -1,0 +1,68 @@
+:root{
+    --background-dark: #333232;
+    --color-light: white;
+    --color-dark: black;
+
+
+    --bs-primary: #FFC93F;
+    --bs-buttonPop: rgb(var(--bs-primary));
+
+    --bs-secondary: #A5CF2E;
+    --bs-buttonCinematic: rgb(var(--bs-secondary));
+
+    --bs-success: #C6873D;
+    --bs-buttonElectro: rgb(var(--bs-success));
+
+    --bs-danger: #33D3C0;
+    --bs-buttonWorld: rgb(var(--bs-danger));
+
+    --bs-warning: #8E49E7;
+    --bs-buttonChillout: rgb(var(--bs-warning));
+
+    --bs-info: #E3355F;
+    --bs-buttonAmbient: rgb(var(--bs-info));
+}
+
+.btn-primary{
+    background-color: var(--bs-primary);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.btn-secondary{
+    background-color: var(--bs-secondary);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.btn-success{
+    background-color: var(--bs-success);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.btn-danger{
+    background-color: var(--bs-danger);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.btn-warning{
+    background-color: var(--bs-warning);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.btn-info{
+    background-color: var(--bs-info);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+body{
+    background-color: var(--background-dark);
+}
+
+h1{
+    color: var(--color-light);
+}
