@@ -9,11 +9,11 @@ class MusicController extends AbstractController
     /**
      * List musics
      */
-    public function showList()
+    public function showListAll()
     {
         $musicManager = new MusicManager();
-        $musicals = $musicManager->musicByGenre();
+        $musics = $musicManager->selectAllList();
 
-        return $this->twig->render('Music/list.html.twig', ['musicals' => $musicals]);
+        return $this->twig->render('Music/listAll.html.twig', ['musics' => $musics]);
     }
 }
