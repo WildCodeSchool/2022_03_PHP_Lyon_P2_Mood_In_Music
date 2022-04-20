@@ -13,6 +13,7 @@ abstract class AbstractManager
     protected PDO $pdo;
 
     public const TABLE = '';
+    public const JOINED_TABLE = '';
 
     public function __construct()
     {
@@ -23,9 +24,13 @@ abstract class AbstractManager
     /**
      * Get all row from database.
      */
-    public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
+    public function selectAll(string $fkey = '', string $orderBy = '', string $direction = 'ASC'): array
     {
         $query = 'SELECT * FROM ' . static::TABLE;
+        if ($fkey !== '') {
+            $query = 'SELECT * FROM ' . static::TABLE . ' INNER JOIN ' . static::JOINED_TABLE .
+            ' ON ' . static::TABLE . '.' . $fkey . ' = ' . static::JOINED_TABLE . '.id';
+        }
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }

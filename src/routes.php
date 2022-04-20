@@ -15,4 +15,9 @@ return [
     'items/delete' => ['ItemController', 'delete',],
 
     'musics' => ['MusicController', 'showListAll'],
+    'admin' => ['MusicController', 'index',],
+    'admin/edit' => ['MusicController', 'edit', ['id']],
+    'admin/show' => ['MusicController', 'show', ['id']],
+    'admin/add' => ['MusicController', 'add',],
+    'admin/delete' => ['MusicController', 'delete',],
 ];

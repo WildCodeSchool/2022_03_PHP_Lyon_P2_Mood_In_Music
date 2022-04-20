@@ -1,0 +1,26 @@
+{# TODO : manage errors display #}
+
+<form method="post" class = "form">
+		<p>
+            <input type="hidden" value="{{ music.id }}" name="id">
+        </p>
+        <p>
+            <label for="title">Titre de la musique :</label>
+            <input type="text" name="title" id="title" value="{{music.title}}" required>
+        </p>
+        <p>
+            <label for="author">Auteur de la musique :</label>
+            <input type="text" name="author" id="author" value="{{music.author}}" required>
+        </p>
+        <p>
+            <label for="source">Source de la musique :</label>
+            <input type="text" name="source" id="source" value="{{music.source}}" required>
+        </p>
+		<p>
+            <label for="genre">Genre de la musique :</label>
+            <input type="text" name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" required>
+        </p>
+        <p>
+            <button type="submit">Valider</button>
+        </p>
+    </form>

@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class = "display-1 text-center mt-5 mb-5" >Bienvenue Admin_name !</h1>
+    <p><a href="admin/add">Ajouter une musique</a></p>
+
+<table class = "table">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Genre</th>
+            <th>Source</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for music in musics %}
+        <tr>
+            <td>{{music.title}}</td>
+            <td>{{music.author}}</td>
+            <td>{{music.genre_name}}</td>
+            <td>{{music.source}}</td>
+            <td><a href="admin/edit?id={{music.id}}">Modifier</a></td>
+            <td><a href="admin/delete?id={{music.id}}">Supprimer</a></td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div><a href="/admin">Accueil</a></div>
+    <h1>{{music.title}}</h1>
+
+    <div>
+        {{music.author}}
+    </div>
+    <a href="edit?id={{music.id}}">Modifier la musique</a>
+    <a href="delete?id={{music.id}}">Supprimer la musique</a>
+
+{% endblock %}
