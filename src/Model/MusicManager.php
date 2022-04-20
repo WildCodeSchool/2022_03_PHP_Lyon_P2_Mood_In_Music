@@ -5,7 +5,7 @@ namespace App\Model;
 class MusicManager extends AbstractManager
 {
     public const TABLE = 'music';
-
+    public const JOINED_TABLE = 'musical_genre';
     /**
      * Insert new item in database
      */

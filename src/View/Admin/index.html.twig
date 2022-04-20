@@ -15,11 +15,10 @@
     </thead>
     <tbody>
     {% for music in musics %}
-    {% set musical_genres = ['pop','cinematic','electro','world','chillout','ambient'] %}
         <tr>
             <td>{{music.title}}</td>
             <td>{{music.author}}</td>
-            <td>{{musical_genres[music.musical_genre_id - 1]}}</td>
+            <td>{{music.genre_name}}</td>
             <td>{{music.source}}</td>
             <td><a href="admin/edit?id={{music.id}}">Modifier</a></td>
             <td><a href="admin/delete?id={{music.id}}">Supprimer</a></td>

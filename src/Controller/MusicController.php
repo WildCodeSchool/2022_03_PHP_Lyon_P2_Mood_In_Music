@@ -9,7 +9,7 @@ class MusicController extends AbstractController
     public function index(): string
     {
         $musicManager = new MusicManager();
-        $musics = $musicManager->selectAll('title');
+        $musics = $musicManager->selectAll('musical_genre_id', 'title');
 
         return $this->twig->render('Admin/index.html.twig', ['musics' => $musics]);
     }
@@ -31,14 +31,11 @@ class MusicController extends AbstractController
             // clean $_POST data
             $music = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
-
             // if validation is ok, update and redirection
             $musicManager->update($music);
 
             header('Location: /admin/show?id=' . $id);
 
-            // we are redirecting so we don't want any content rendered
             return null;
         }
 
@@ -55,8 +52,6 @@ class MusicController extends AbstractController
             // clean $_POST data
             $music = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
-
             // if validation is ok, insert and redirection
             $musicManager = new MusicManager();
             $id = $musicManager->insert($music);
@@ -70,12 +65,14 @@ class MusicController extends AbstractController
 
     public function delete(): void
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && is_numeric($_GET['id'])) {
             $id = trim($_GET['id']);
             $musicManager = new MusicManager();
             $musicManager->delete((int)$id);
 
             header('Location:/admin');
+        } elseif (!is_numeric($_GET['id'])) {
+            echo "Id non valide";
         }
     }
 }
