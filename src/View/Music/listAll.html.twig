@@ -4,20 +4,7 @@
 	<main class="container">
 		<div class="row justify-content-around">
 			{% for musical in musics %}
-				{% if musical.genre_name == 'pop' %}
-				{% set class_genre = 'card-pop'%}
-				{% elseif musical.genre_name == 'cinematic' %}
-				{% set class_genre = 'card-cinematic'%}
-				{% elseif musical.genre_name == 'electro' %}
-				{% set class_genre = 'card-electro'%}
-				{% elseif musical.genre_name == 'world' %}
-				{% set class_genre = 'card-world'%}
-				{% elseif musical.genre_name == 'chillout' %}
-				{% set class_genre = 'card-chillout'%}
-				{% elseif musical.genre_name == 'ambient' %}
-				{% set class_genre = 'card-ambient'%}
-				{% endif %}
-				<div class="{{ class_genre }} mb-5" style="width: 20rem">
+				<div class="card-{{ musical.genre_name }}  mb-5" style="width: 20rem">
 					<h5 class="card-title">{{ musical.title }}</h5>
 					<h6 class="card-subtitle mb-2 text-muted">By
 						{{ musical.author}}/h6>
