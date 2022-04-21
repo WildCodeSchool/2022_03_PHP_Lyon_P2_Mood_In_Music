@@ -1,0 +1,106 @@
+:root{
+    --background-dark: #333232;
+    --color-light: white;
+    --color-dark: black;
+
+
+    --bs-pop: #FFC93F;
+    --bs-buttonPop: rgb(var(--bs-primary));
+
+    --bs-cinematic: #A5CF2E;
+    --bs-buttonCinematic: rgb(var(--bs-secondary));
+
+    --bs-electro: #C6873D;
+    --bs-buttonElectro: rgb(var(--bs-success));
+
+    --bs-world: #33D3C0;
+    --bs-buttonWorld: rgb(var(--bs-danger));
+
+    --bs-chillout: #8E49E7;
+    --bs-buttonChillout: rgb(var(--bs-warning));
+
+    --bs-ambient: #E3355F;
+    --bs-buttonAmbient: rgb(var(--bs-info));
+}
+
+.btn-primary{
+    background-color: var(--bs-pop);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.table{
+    color: var(--color-light);
+}
+
+.card-pop{
+    background-color: var(--bs-pop);
+}
+
+.btn-secondary{
+    background-color: var(--bs-cinematic);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.card-cinematic{
+    background-color: var(--bs-cinematic);
+}
+
+.btn-success{
+    background-color: var(--bs-electro);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.card-electro{
+    background-color: var(--bs-electro);
+}
+
+.btn-danger{
+    background-color: var(--bs-world);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.card-world{
+    background-color: var(--bs-world);
+}
+
+.btn-warning{
+    background-color: var(--bs-chillout);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.card-chillout{
+    background-color: var(--bs-chillout);
+}
+
+.btn-info{
+    background-color: var(--bs-ambient);
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.card-ambient{
+    background-color: var(--bs-ambient);
+}
+
+body{
+    background-color: var(--background-dark);
+}
+
+h1{
+    color: var(--color-light);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.btn:hover{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
