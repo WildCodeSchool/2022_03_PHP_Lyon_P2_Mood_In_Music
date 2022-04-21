@@ -16,6 +16,8 @@ return [
 
     'musics' => ['MusicController', 'showListAll'],
     'admin' => ['MusicController', 'index',],
+    'admin/login' => ['UserController', 'login',],
+    'admin/logout' => ['UserController', 'logout',],
     'admin/edit' => ['MusicController', 'edit', ['id']],
     'admin/show' => ['MusicController', 'show', ['id']],
     'admin/add' => ['MusicController', 'add',],

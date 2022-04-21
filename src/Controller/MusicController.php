@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\LoginManager;
 use App\Model\MusicManager;
 
 class MusicController extends AbstractController
