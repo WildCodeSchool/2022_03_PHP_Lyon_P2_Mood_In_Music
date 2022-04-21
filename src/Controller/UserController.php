@@ -22,6 +22,7 @@ class UserController extends AbstractController
             if ($user && $user['password'] === $password) {
                 $_SESSION['user_id'] = $user['id'];
                 header("Location: /admin");
+                return null;
             } else {
                 $errorMessage = 'Mot de passe ou pseudo incorrect';
             }
@@ -33,5 +34,6 @@ class UserController extends AbstractController
     {
         session_unset();
         header("Location: /admin/login");
+        return null;
     }
 }
