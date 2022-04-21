@@ -68,16 +68,15 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote) VALUES
 ('Amine Maxwell','Essaouira',1062290803,3,0),
 ('Scandinavianz','Hiking',1018958728,3,0),
 ('Markvard','Desire',705438868,3,0),
-('A Virtual Friend','Paris la nuit',101988889,3,0),
+('Star Swimming','Props',101988889,3,0),
 ('Wontolla','Laser Pointer',205554396,3,0);
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote) VALUES
-('CyberSDF','Flame and Go',257129209,4,0),
-('Peritune','Sakuya2',239947267,4,0),
+('Flame and Go','CyberSDF',257129209,4,0),
+('Sakuya2','Peritune',239947267,4,0),
 ('Intención','Sapajou',899729788,4,0),
-('Songo 21','Opening Para',302511747,4,0),
+('Opening Para','Songo 21',302511747,4,0),
 ('Guazú','Shika Shika',299847363,4,0);
-
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote) VALUES
 ('Takayama','Niwel',726161599,5,0),
@@ -92,3 +91,99 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote) VALUES
 ('Wild Birth','Under The Gaïac',789639880,6,0),
 ('Titan','Scott Buckley',457526781,6,0),
 ('To The Great Beyond','Stellardrone',162416525,6,0);
+
+INSERT INTO user (pseudo, password)
+ VALUES
+ ('user_test', 'pwd_test'),
+ ('user_test2', 'pwd_test2');
+ 
+ UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/307027394&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 1;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/101988889&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 2;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/185495869&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 3;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/549886593&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 4;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184041689&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 5;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/394326033&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 6;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205456569&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 7;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23434963&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 8;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1243586404&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 9;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233954398&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 10;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1062290803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 11;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1018958728&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 12;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/646593702&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 13;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1196175913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 14;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205554396&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 15;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257129209&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 16;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239947267&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 17;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/899729788&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 18;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309315528&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 19;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/307605364&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 20;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726161599&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 21;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660919205&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 22;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/772063282&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 23;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/456939843&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 24;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/776397571&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 25;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1004355163&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 26;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110602862&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 27;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/789639880&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 28;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/457526781&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 29;
+UPDATE music 
+SET source = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162416525&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+WHERE id = 30;
