@@ -22,4 +22,6 @@ return [
     'admin/show' => ['MusicController', 'show', ['id']],
     'admin/add' => ['MusicController', 'add',],
     'admin/delete' => ['MusicController', 'delete',],
+
+    'music/player' => ['MusicController', 'player', ['id']],
 ];

@@ -11,7 +11,7 @@ class MusicManager extends AbstractManager
      */
     public function selectAllList()
     {
-        $query = 'SELECT music.title, music.author, music.source, genre.genre_name 
+        $query = 'SELECT music.id, music.title, music.author, music.source, genre.genre_name 
         FROM music
         INNER JOIN musical_genre AS genre ON music.musical_genre_id=genre.id
         ORDER BY music.title ASC;';
@@ -50,5 +50,18 @@ class MusicManager extends AbstractManager
         $statement->bindValue('source', $music['source'], \PDO::PARAM_STR);
 
         return $statement->execute();
+    }
+
+    /**
+     * Get one row from database by ID.
+     */
+    public function selectOneById(int $id): array|false
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
     }
 }
