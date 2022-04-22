@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\LoginManager;
 use App\Model\MusicManager;
 
 class MusicController extends AbstractController
@@ -85,5 +86,12 @@ class MusicController extends AbstractController
         } elseif (!is_numeric($_GET['id'])) {
             echo "Id non valide";
         }
+    }
+    public function player(int $id)
+    {
+        $musicManager =  new MusicManager();
+        $player = $musicManager->selectOneById($id);
+
+        return $this->twig->render('Music/player.html.twig', ['player' => $player]);
     }
 }
