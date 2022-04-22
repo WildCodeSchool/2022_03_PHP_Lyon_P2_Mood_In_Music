@@ -21,7 +21,7 @@ class MusicController extends AbstractController
     public function index(): string
     {
         $musicManager = new MusicManager();
-        $musics = $musicManager->selectAll('musical_genre_id', 'title');
+        $musics = $musicManager->selectAllItems();
 
         return $this->twig->render('Admin/index.html.twig', ['musics' => $musics]);
     }

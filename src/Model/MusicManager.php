@@ -19,6 +19,15 @@ class MusicManager extends AbstractManager
         return $this->pdo->query($query)->fetchAll();
     }
 
+    public function selectAllItems()
+    {
+        $query = "SELECT music.id, music.title, music.author,music.source, music.musical_genre_id, genre.genre_name
+            FROM music INNER JOIN musical_genre as genre
+            ON music.musical_genre_id = genre.id;";
+
+            return $this->pdo->query($query)->fetchAll();
+    }
+
     public const JOINED_TABLE = 'musical_genre';
     /**
      * Insert new item in database
