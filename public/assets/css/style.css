@@ -104,3 +104,11 @@ a{
     background-color: var(--color-dark);
     color: var(--color-light);
 }
+
+p{
+    color: var(--color-light);
+}
+    
+label{
+    width: 162px;
+}
