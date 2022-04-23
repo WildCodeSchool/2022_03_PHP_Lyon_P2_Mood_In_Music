@@ -87,4 +87,11 @@ class MusicController extends AbstractController
             echo "Id non valide";
         }
     }
+    public function player(int $id)
+    {
+        $musicManager =  new MusicManager();
+        $player = $musicManager->selectOneById($id);
+
+        return $this->twig->render('Music/player.html.twig', ['player' => $player]);
+    }
 }
