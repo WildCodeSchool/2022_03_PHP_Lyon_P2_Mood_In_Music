@@ -1,35 +1,31 @@
 {# TODO : manage errors display #}
-
-<form method="post" class = "form">
+<main class="container">
+<form method="post" class="form">
 		<p>
             <input type="hidden" value="{{ music.id }}" name="id">
         </p>
-        <p class="form-group">
-            <label for="title">Titre de la musique :</label>
+        <p>
+            <label for="title" class="form-label">Titre de la musique :</label>
             <input type="text" name="title" id="title" value="{{music.title}}" class="form-control" required>
         </p>
-        <p class="form-group">
-            <label for="author">Auteur de la musique :</label>
+        <p>
+            <label for="author" class="form-label">Auteur de la musique :</label>
             <input type="text" name="author" id="author" value="{{music.author}}" class="form-control" required>
         </p>
-        <p class="form-group">
-            <label for="source">Source de la musique :</label>
-            <input type="text" name="source" id="source" value="{{music.source}}" class="form-control text-area" required>
-        </p>
-		<p class="form-group">
-            <label for="musical_genre_id">Genre de la musique :</label>
-            <select name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" class="form-control" required>
-                <option value="">--Sélectionne un genre--</option>
-                <option value="1">Pop</option>
-                <option value="2">Cinematic</option>
-                <option value="3">Electro</option>
-                <option value="4">World</option>
-                <option value="5">Chillout</option>
-                <option value="6">Ambient</option>
-            </select>
-        </p>
-
         <p>
-            <button type="submit">Valider</button>
+            <label for="source" class="form-label">Source de la musique :</label>
+            <input type="text" name="source" id="source" value="{{music.source}}" class="form-control" required>
+        </p>
+		<p>
+            <label for="genre" class="form-label">Genre de la musique :</label>
+            <input type="text" name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" class="form-control" required>
+        </p>
+        <p>
+            <label for="image" class="form-label">Image à uploader :</label>
+            <input type="file" name="image" id="image" value="{{music.image}}" class="form-control" required>
+        </p>
+        <p>
+            <button type="submit" class="align-self-center">Valider</button>
         </p>
     </form>
+</main>
