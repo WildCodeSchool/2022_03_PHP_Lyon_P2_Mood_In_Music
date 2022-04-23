@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}    
-    <h1>Mise à jour de la musique {{ music.title }}</h1>
+    <h1 class="text-center mt-5 mb-5">Mettre à jour : {{ music.title }}</h1>
     {% include 'Admin/_form.html.twig' %}
     <a href="/admin">Retour</a>
 {% endblock %}
