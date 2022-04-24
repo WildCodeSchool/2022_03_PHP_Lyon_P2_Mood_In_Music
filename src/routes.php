@@ -15,6 +15,7 @@ return [
     'items/delete' => ['ItemController', 'delete',],
 
     'musics' => ['MusicController', 'showListAll'],
+    'music/player' => ['MusicController', 'player', ['id']],
     'admin' => ['MusicController', 'index',],
     'admin/login' => ['UserController', 'login',],
     'admin/logout' => ['UserController', 'logout',],
@@ -22,6 +23,4 @@ return [
     'admin/show' => ['MusicController', 'show', ['id']],
     'admin/add' => ['MusicController', 'add',],
     'admin/delete' => ['MusicController', 'delete',],
-
-    'music/player' => ['MusicController', 'player', ['id']],
 ];

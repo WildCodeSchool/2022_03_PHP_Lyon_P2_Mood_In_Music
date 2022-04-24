@@ -1,13 +1,27 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div><a href="/admin">Accueil</a></div>
-    <h1>{{music.title}}</h1>
-
-    <div>
-        {{music.author}}
+    <h1 class="text-center mt-5 mb-5"> Musique ajoutée :</h1>
+    <h1 class="text-center mt-5 mb-5">
+        {{music.title}} 
+    </h1>
+    <h1 class="text-center mt-5 mb-5">
+        By {{music.author}} 
+    </h1>
+    <p>
+        {{music.source}}
+    </p>
+    <p>
+        {{music.music_image}}
+    </p>
+    <p>
+        Dans {{music.genre_name}}
+    </p>
+    <div class="text-center">
+        <td><button type="button" class="btn-light m-2 p-2"><a href="edit?id={{music.id}}">Modifier la musique</a></button></td>
+        <td><button type="button" class="btn-danger m-2 p-2"><a href="delete?id={{music.id}}">Supprimer la musique</a></button></td>
+        <p>
+            <a class="text-light" href="/admin">Retour à la liste des musiques</a>
+        </p>
     </div>
-    <a href="edit?id={{music.id}}">Modifier la musique</a>
-    <a href="delete?id={{music.id}}">Supprimer la musique</a>
-
 {% endblock %}
