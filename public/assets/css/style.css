@@ -1,7 +1,7 @@
 :root{
-    --background-dark: #141414;
+    --background-dark: #333232;
     --color-light: white;
-    --color-dark: black;
+    --color-dark: rgb(12, 12, 12);
 
 /* Variable bootstrap button*/
     --bs-pop: #FFC93F;
@@ -91,7 +91,7 @@
 
 /* CSS for general page */
 body{
-    background-color: var(--background-dark);
+    background-color: var(--color-dark);
 }
 
 h1{
@@ -113,4 +113,9 @@ label{
 
 .table{
     color: var(--color-light);
+}
+
+.footer{
+    background-color: var(--background-dark);
+    height: 35px;
 }
