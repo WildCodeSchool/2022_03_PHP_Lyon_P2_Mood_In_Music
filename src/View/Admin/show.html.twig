@@ -1,10 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<main class="container">
     <h1 class="text-center mt-5 mb-5"> Musique ajoutée :</h1>
-    <p>
-        <a class="text-light" href="/admin">Retour à la liste des musiques</a>
-    </p>
     <h1 class="text-center mt-5 mb-5">
         {{music.title}} By {{music.author}} 
     </h1>
@@ -14,11 +12,8 @@
     <p>
         {{music.music_image}}
     </p>
-    <p>
-        Dans {{music.genre_name}}
-    </p>
     <div class="text-center">
-        <td><button type="button" class="btn-light m-2 p-2"><a href="edit?id={{music.id}}">Modifier la musique</a></button></td>
-        <td><button type="button" class="btn-danger m-2 p-2"><a href="delete?id={{music.id}}">Supprimer la musique</a></button></td>
+       <button type="button" class="btn btn-light m-2 p-2"><a href="/admin">Retour à la liste</a></button>
     </div>
+</main>
 {% endblock %}
