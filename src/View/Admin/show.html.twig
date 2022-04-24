@@ -2,6 +2,9 @@
 
 {% block content %}
     <h1 class="text-center mt-5 mb-5"> Musique ajoutée :</h1>
+    <p>
+        <a class="text-light" href="/admin">Retour à la liste des musiques</a>
+    </p>
     <h1 class="text-center mt-5 mb-5">
         {{music.title}} By {{music.author}} 
     </h1>
@@ -17,8 +20,5 @@
     <div class="text-center">
         <td><button type="button" class="btn-light m-2 p-2"><a href="edit?id={{music.id}}">Modifier la musique</a></button></td>
         <td><button type="button" class="btn-danger m-2 p-2"><a href="delete?id={{music.id}}">Supprimer la musique</a></button></td>
-        <p>
-            <a class="text-light" href="/admin">Retour à la liste des musiques</a>
-        </p>
     </div>
 {% endblock %}
