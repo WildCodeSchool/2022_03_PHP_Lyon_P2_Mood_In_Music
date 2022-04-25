@@ -17,12 +17,17 @@
             <input type="text" name="source" id="source" value="{{music.source}}" class="form-control" required>
         </p>
 		<p>
-            <label for="genre" class="form-label m-2">Genre :</label>
-            <input type="text" name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" class="form-control" required>
+            <label for="musical_genre_id" class="form-label m-2">Genre : {{music.genre_name}}</label>
+            <select name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" class="form-control" required>
+                <option value="{{genre.id}}">Select genre : </option>
+                {% for genre in genres %}
+                    <option value="{{genre.id}}">{{genre.genre_name}}</option> 
+                {% endfor %}
+            </select>
         </p>
         <p>
-            <label for="image" class="form-label m-2">Image :</label>
-            <input type="file" name="image" id="music_image" value="{{music.music_image}}" class="form-control" required>
+            <label for="image" class="form-label m-2">Image : <img width="60px" src="{{music.music_image}}"></label>
+            <input type="file" name="music_image" id="music_image" value="{{music.music_image}}" class="form-control">
         </p>
         <p class="text-center">
             <button type="submit" class="mt-2 py-1 px-4">Valider</button>

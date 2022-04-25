@@ -2,18 +2,25 @@
 
 {% block content %}
 <main class="container">
-    <h1 class="text-center mt-5 mb-5"> Musique ajoutée :</h1>
-    <h1 class="text-center mt-5 mb-5">
+    <h1 class="text-center mt-3 mb-3"> Musique ajoutée :</h1>
+    <h1 class="text-center mt-3 mb-3">
         {{music.title}} By {{music.author}} 
     </h1>
     <p>
         {{music.source}}
     </p>
     <p>
-        {{music.music_image}}
+        <img src="{{music.music_image}}">
     </p>
-    <div class="text-center">
-       <button type="button" class="btn btn-light m-2 p-2"><a href="/admin">Retour à la liste</a></button>
-    </div>
+    <p>
+        {{music.genre_name}}
+    </p>
+    <p class="text-center">
+        <button type="button" class="btn btn-light mt-4"><a href="edit?id={{music.id}}">Modifier</a></button>
+        <button type="button" class="btn btn-danger mt-4"><a href="delete?id={{music.id}}">Supprimer</a></button>
+    </p>
+    <p class="text-center">
+       <button type="button" class="btn btn-light m-2 p-2"><a href="/admin">Valider</a></button>
+    </p>
 </main>
 {% endblock %}
