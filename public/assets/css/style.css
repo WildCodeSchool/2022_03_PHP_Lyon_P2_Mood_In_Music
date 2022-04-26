@@ -115,7 +115,9 @@ label{
     color: var(--color-light);
 }
 
-.footer{
+.page-footer{
     background-color: var(--background-dark);
     height: 35px;
+    position: fixed;
+    margin: 0;
 }
