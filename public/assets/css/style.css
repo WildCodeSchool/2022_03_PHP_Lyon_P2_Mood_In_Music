@@ -93,6 +93,11 @@
 body{
     background-color: var(--color-dark);
     box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.navbar-collapse{
+    flex: none;
 }
 
 h1{
