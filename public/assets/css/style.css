@@ -112,3 +112,7 @@ p{
 label{
     width: 162px;
 }
+
+.sound.artworkVisible .sound__artwork {
+    display: none;
+  }

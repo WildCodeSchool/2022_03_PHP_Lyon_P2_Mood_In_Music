@@ -58,7 +58,13 @@ class MusicManager extends AbstractManager
     public function selectOneById(int $id): array|false
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id=:id");
+
+        $query = 'SELECT music.id, music.title, music.author, music.source, music.music_image,genre.genre_name 
+        FROM music
+        INNER JOIN musical_genre AS genre ON music.musical_genre_id=genre.id
+        WHERE music.id = :id;
+        ORDER BY music.title ASC;';
+        $statement = $this->pdo->prepare($query);
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
 
