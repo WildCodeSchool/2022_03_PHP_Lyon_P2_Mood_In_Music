@@ -92,6 +92,7 @@
 /* CSS for general page */
 body{
     background-color: var(--color-dark);
+    box-sizing: border-box;
 }
 
 h1{
@@ -115,9 +116,15 @@ label{
     color: var(--color-light);
 }
 
-.page-footer{
+body,html{
+    height: max-content;
+}
+
+.sticky-footer{
     background-color: var(--background-dark);
+    color: var(--color-light);
     height: 35px;
-    position: fixed;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: 0;
+    width:100%;
 }
