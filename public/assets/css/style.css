@@ -1,9 +1,9 @@
 :root{
     --background-dark: #333232;
     --color-light: white;
-    --color-dark: black;
+    --color-dark: rgb(12, 12, 12);
 
-
+/* Variable bootstrap button*/
     --bs-pop: #FFC93F;
     --bs-buttonPop: rgb(var(--bs-primary));
 
@@ -14,7 +14,7 @@
     --bs-buttonElectro: rgb(var(--bs-success));
 
     --bs-world: #33D3C0;
-    --bs-buttonWorld: rgb(var(--bs-danger));
+    --bs-buttonWorld: rgb(var(--bs-dark));
 
     --bs-chillout: #8E49E7;
     --bs-buttonChillout: rgb(var(--bs-warning));
@@ -23,14 +23,11 @@
     --bs-buttonAmbient: rgb(var(--bs-info));
 }
 
+/*Adapt color for button and cards*/
 .btn-primary{
     background-color: var(--bs-pop);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
-}
-
-.table{
-    color: var(--color-light);
 }
 
 .card-pop{
@@ -57,7 +54,7 @@
     background-color: var(--bs-electro);
 }
 
-.btn-danger{
+.btn-dark{
     background-color: var(--bs-world);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
@@ -87,8 +84,20 @@
     background-color: var(--bs-ambient);
 }
 
+.btn:hover{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* CSS for general page */
 body{
-    background-color: var(--background-dark);
+    background-color: var(--color-dark);
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.navbar-collapse{
+    flex: none;
 }
 
 h1{
@@ -100,9 +109,30 @@ a{
     color: var(--color-dark);
 }
 
-.btn:hover{
-    background-color: var(--color-dark);
+p{
     color: var(--color-light);
+}
+    
+label{
+    width: 162px;
+}
+
+.table{
+    color: var(--color-light);
+}
+
+body,html{
+    height: max-content;
+}
+
+.sticky-footer{
+    background-color: var(--background-dark);
+    color: var(--color-light);
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: 0;
+    width:100%;
+
 }
 
 p{
@@ -111,4 +141,8 @@ p{
 
 label{
     width: 162px;
+}
+
+#form-label-password{
+    width: max-content;
 }
