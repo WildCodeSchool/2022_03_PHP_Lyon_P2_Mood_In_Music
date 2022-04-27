@@ -11,7 +11,7 @@ class MusicManager extends AbstractManager
      */
     public function selectAllList()
     {
-        $query = 'SELECT music.id, music.title, music.author, music.source, genre.genre_name 
+        $query = 'SELECT music.id, music.title, music.author, music.source, music.music_image, genre.genre_name 
         FROM music
         INNER JOIN musical_genre AS genre ON music.musical_genre_id=genre.id
         ORDER BY music.title ASC;';

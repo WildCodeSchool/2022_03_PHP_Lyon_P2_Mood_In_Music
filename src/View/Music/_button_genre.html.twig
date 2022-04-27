@@ -1,15 +1,40 @@
 {# Music/_button_genre.html.twig #}
-<div class="container">
+<div class="container-fluid">
 	<h1 class="text-center mt-5 mb-5">WELCOME TO MOOD IN MUSIC</h1>
 
-	<div class="d-flex justify-content-between m-5 btn-group-lg " role="group" aria-label="Un groupe de boutons">
-		<button type="button" class="btn btn-primary">
-			<a href="">POP</a>
-		</button>
-		<button type="button" class="btn btn-secondary">CINEMATIC</button>
-		<button type="button" class="btn btn-success">ELECTRO</button>
-		<button type="button" class="btn btn-danger">WORLD</button>
-		<button type="button" class="btn btn-warning">CHILLOUT</button>
-		<button type="button" class="btn btn-info">AMBIENT</button>
+	<div class="d-none d-md-flex justify-content-evenly m-5 btn-group-lg row gy-3" role="group" aria-label="Un groupe de boutons">
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-primary rounded-circle">POP</button>
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-secondary rounded-circle">CINEMATIC</button>
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-success rounded-circle">ELECTRO</button>
+		<div class="w-100 h-50 d-lg-none"></div>
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-danger rounded-circle">WORLD</button>
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-warning rounded-circle">CHILLOUT</button>
+		<button type="button" class="col-md-4 col-lg-2 flex-shrink-0 btn btn-info rounded-circle">AMBIENT</button>
 	</div>
+</div>
+
+<div class="dropdown">
+	<button class="d-md-none btn btn-light dropdown-toggle mb-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		Select your music genre here
+	</button>
+	<ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+		<li>
+			<a class="align-middle dropdown-item btn-primary" href="#">POP</a>
+		</li>
+		<li>
+			<a class="dropdown-item btn-secondary" href="#">CINEMATIC</a>
+		</li>
+		<li>
+			<a class="dropdown-item btn-success" href="#">ELECTRO</a>
+		</li>
+		<li>
+			<a class="dropdown-item btn-danger" href="#">WORLD</a>
+		</li>
+		<li>
+			<a class="dropdown-item btn-warning" href="#">CHILLOUT</a>
+		</li>
+		<li>
+			<a class="dropdown-item btn-info" href="#">AMBIENT</a>
+		</li>
+	</ul>
 </div>
