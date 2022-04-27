@@ -113,6 +113,14 @@ label{
     width: 162px;
 }
 
-.sound.artworkVisible .sound__artwork {
-    display: none;
-  }
+.soundcloud{
+    width: 80%;
+}
+
+#img_player{
+    width: 15rem;
+}
+
+#card_player{
+    width: 80%;
+}
