@@ -1,17 +1,18 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class = "display-1 text-center mt-5 mb-5" >Bienvenue {{user.pseudo}} !</h1>
+<main class="container mb-5">
+    <h1 class="text-center mt-3 mb-3" >Bonjour {{user.pseudo}} !</h1>
+    <button type="button" class="btn btn-light float-end mb-3" id="button_add"><a href="admin/add">Ajouter une musique</a></button>
+    <p>Liste des musiques</p>
 
-    <p><a href="admin/add">Ajouter une musique</a></p>
-
-<table class = "table">
+<table class="table">
     <thead>
         <tr>
             <th>Titre</th>
             <th>Auteur</th>
             <th>Genre</th>
-            <th>Source</th>
+            <th>Image</th>
         </tr>
     </thead>
     <tbody>
@@ -20,13 +21,12 @@
             <td>{{music.title}}</td>
             <td>{{music.author}}</td>
             <td>{{music.genre_name}}</td>
-            <td>{{music.source}}</td>
-            <td><a href="admin/edit?id={{music.id}}">Modifier</a></td>
-            <td><a href="admin/delete?id={{music.id}}">Supprimer</a></td>
+            <td><img width="70px" class="mt-2" src="{{music.music_image}}"></td>
+            <td><button type="button" class="btn btn-light mt-2"><a href="admin/edit?id={{music.id}}">Modifier</a></button></td>
+            <td><button type="button" class="btn btn-danger mt-2"><a href="admin/delete?id={{music.id}}">Supprimer</a></button></td>
         </tr>
     {% endfor %}
-
     </tbody>
 </table>
-
+</main>
 {% endblock %}
