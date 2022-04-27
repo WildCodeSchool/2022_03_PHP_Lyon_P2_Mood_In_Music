@@ -146,3 +146,7 @@ label{
 #form-label-password{
     width: max-content;
 }
+
+#card-music-genre{
+    width: 20rem;
+}
