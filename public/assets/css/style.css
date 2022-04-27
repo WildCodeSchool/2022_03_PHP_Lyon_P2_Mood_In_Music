@@ -142,3 +142,7 @@ p{
 label{
     width: 162px;
 }
+
+#form-label-password{
+    width: max-content;
+}
