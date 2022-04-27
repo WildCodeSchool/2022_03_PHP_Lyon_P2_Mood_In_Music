@@ -132,4 +132,13 @@ body,html{
     margin-top: auto;
     margin-bottom: 0;
     width:100%;
+
+}
+
+p{
+    color: var(--color-light);
+}
+
+label{
+    width: 162px;
 }
