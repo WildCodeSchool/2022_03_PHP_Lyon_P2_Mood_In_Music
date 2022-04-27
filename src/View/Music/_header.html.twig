@@ -8,10 +8,7 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" href="/">Accueil</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/">Liste des musiques</a>
+					<a class="nav-link" href="/">Musiques</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="">Classement du mois</a>
@@ -19,10 +16,10 @@
 
 				{% if user %}
 					<li class="nav-item">
-						<a class="nav-link" href="/admin/login">ADMIN</a>
+						<a class="nav-link" href="/admin/login">BDD</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link align-self-end" href="/admin/logout">LOGOUT</a>
+						<a class="nav-link align-self-end" href="/admin/logout">Se déconnecter</a>
 					</li>
 				{% else %}
 					<li class="nav-item">
@@ -33,3 +30,4 @@
 		</div>
 	</div>
 </nav>
+

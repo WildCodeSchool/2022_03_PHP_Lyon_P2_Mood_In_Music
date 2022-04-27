@@ -21,7 +21,7 @@ class MusicController extends AbstractController
     public function index(): string
     {
         $musicManager = new MusicManager();
-        $musics = $musicManager->selectAll('musical_genre_id', 'title');
+        $musics = $musicManager->selectAllItems();
 
         return $this->twig->render('Admin/index.html.twig', ['musics' => $musics]);
     }
@@ -36,6 +36,9 @@ class MusicController extends AbstractController
 
     public function edit(int $id): ?string
     {
+        $musicManager = new MusicManager();
+        $genres = $musicManager->selectAllGenre();
+
         $musicManager = new MusicManager();
         $music = $musicManager->selectOneById($id);
 
@@ -55,11 +58,15 @@ class MusicController extends AbstractController
         $music = $musicManager->selectOneById($id);
         return $this->twig->render('Admin/edit.html.twig', [
             'music' => $music,
+            'genres' => $genres
         ]);
     }
 
     public function add(): ?string
     {
+        $musicManager = new MusicManager();
+        $genres = $musicManager->selectAllGenre();
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $music = array_map('trim', $_POST);
@@ -72,7 +79,7 @@ class MusicController extends AbstractController
             return null;
         }
 
-        return $this->twig->render('Admin/add.html.twig');
+        return $this->twig->render('Admin/add.html.twig', ['genres' => $genres]);
     }
 
     public function delete(): void
