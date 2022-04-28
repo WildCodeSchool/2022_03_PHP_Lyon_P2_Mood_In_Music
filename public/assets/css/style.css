@@ -1,188 +1,189 @@
-:root{
+:root {
     --background-dark: #333232;
     --color-light: white;
     --color-dark: rgb(12, 12, 12);
 
-/* Variable bootstrap button*/
-    --bs-pop: #FFC93F;
+    /* Variable bootstrap button*/
+    --bs-pop: #ffc93f;
     --bs-buttonPop: rgb(var(--bs-primary));
 
-    --bs-cinematic: #A5CF2E;
+    --bs-cinematic: #a5cf2e;
     --bs-buttonCinematic: rgb(var(--bs-secondary));
 
-    --bs-electro: #C6873D;
+    --bs-electro: #c6873d;
     --bs-buttonElectro: rgb(var(--bs-success));
 
-    --bs-world: #33D3C0;
+    --bs-world: #33d3c0;
     --bs-buttonWorld: rgb(var(--bs-dark));
 
-    --bs-chillout: #8E49E7;
+    --bs-chillout: #8e49e7;
     --bs-buttonChillout: rgb(var(--bs-warning));
 
-    --bs-ambient: #E3355F;
+    --bs-ambient: #e3355f;
     --bs-buttonAmbient: rgb(var(--bs-info));
 }
 
 /*Adapt color for button and cards*/
-.btn-primary{
+.btn-primary {
     background-color: var(--bs-pop);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-pop{
+.card-pop {
     background-color: var(--bs-pop);
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: var(--bs-cinematic);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-cinematic{
+.card-cinematic {
     background-color: var(--bs-cinematic);
 }
 
-.btn-success{
+.btn-success {
     background-color: var(--bs-electro);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-electro{
+.card-electro {
     background-color: var(--bs-electro);
 }
 
-.btn-dark{
+.btn-dark {
     background-color: var(--bs-world);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-world{
+.card-world {
     background-color: var(--bs-world);
 }
 
-.btn-warning{
+.btn-warning {
     background-color: var(--bs-chillout);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-chillout{
+.card-chillout {
     background-color: var(--bs-chillout);
 }
 
-.btn-info{
+.btn-info {
     background-color: var(--bs-ambient);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
 }
 
-.card-ambient{
+.card-ambient {
     background-color: var(--bs-ambient);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--color-dark);
     color: var(--color-light);
 }
 
 /* CSS for general page */
-body{
+body {
     background-color: var(--color-dark);
     box-sizing: border-box;
     margin-bottom: 2rem;
 }
 
-.navbar-collapse{
+.navbar-collapse {
     flex: none;
 }
 
-h1{
+h1 {
     color: var(--color-light);
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-dark);
 }
 
-.btn{
+.btn_list {
     height: 8rem;
     width: 8rem;
 }
 
-.dropdown-menu a{
+.dropdown-menu a {
     height: 100%;
     font-size: 1.5rem;
 }
 
-.dropdown ul{
+.dropdown ul {
     width: 100%;
 }
 
-.dropdown button{
+.dropdown button {
     width: 100%;
     height: 3rem;
 }
 
-.btn:hover, .dropdown-item:hover{
+.btn:hover,
+.dropdown-item:hover {
     background-color: var(--color-dark);
 }
 
-p{
+p {
     color: var(--color-light);
 }
-    
-label{
+
+label {
     width: 162px;
 }
 
-.table{
+.table {
     color: var(--color-light);
 }
 
-body,html{
+body,
+html {
     height: max-content;
 }
 
-.sticky-footer{
+.sticky-footer {
     background-color: var(--background-dark);
     color: var(--color-light);
     height: 35px;
     margin-top: auto;
     margin-bottom: 0;
-    width:100%;
-
+    width: 100%;
 }
 
-p{
+p {
     color: var(--color-light);
 }
 
-label{
+label {
     width: 162px;
 }
 
-li{
+li {
     text-align: center;
     height: 3rem;
     margin: 0;
 }
 
-.soundcloud{
+.soundcloud {
     width: 80%;
 }
 
-#img_player{
+#img_player {
     width: 15rem;
 }
 
-#card_player{
+#card_player {
     width: 80%;
 }
-#form-label-password{
+#form-label-password {
     width: max-content;
 }

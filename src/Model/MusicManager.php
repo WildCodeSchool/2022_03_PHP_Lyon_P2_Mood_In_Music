@@ -22,20 +22,6 @@ class MusicManager extends AbstractManager
     }
 
     /**
-     * Get all items from database.
-     */
-    public function selectAllItems()
-    {
-        $query = 'SELECT ' . self::TABLE . '.id, title, author, source,
-        music_image, musical_genre_id, ' . self::JOINED_TABLE . '.genre_name
-        FROM ' . self::TABLE . '
-        INNER JOIN ' . self::JOINED_TABLE . '
-        ON ' . self::TABLE . '.musical_genre_id=' . self::JOINED_TABLE . '.id';
-
-        return $this->pdo->query($query)->fetchAll();
-    }
-
-    /**
      * Get all genre from database.
      */
     public function selectAllGenre()
