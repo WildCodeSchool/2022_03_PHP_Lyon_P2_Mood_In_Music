@@ -171,6 +171,18 @@ li{
     height: 3rem;
     margin: 0;
 }
+
+.soundcloud{
+    width: 80%;
+}
+
+#img_player{
+    width: 15rem;
+}
+
+#card_player{
+    width: 80%;
+}
 #form-label-password{
     width: max-content;
 }

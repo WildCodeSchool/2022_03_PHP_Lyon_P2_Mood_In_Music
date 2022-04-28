@@ -28,8 +28,9 @@ abstract class AbstractManager
     {
         $query = 'SELECT * FROM ' . static::TABLE;
         if ($fkey !== '') {
-            $query = 'SELECT * FROM ' . static::TABLE . ' INNER JOIN ' . static::JOINED_TABLE .
-            ' ON ' . static::TABLE . '.' . $fkey . ' = ' . static::JOINED_TABLE . '.id';
+            $query = 'SELECT music.id, music.title, music.author,music.source, music.musical_genre_id, genre.genre_name
+            FROM music INNER JOIN musical_genre as genre
+            ON music.musical_genre_id = genre.id;';
         }
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
