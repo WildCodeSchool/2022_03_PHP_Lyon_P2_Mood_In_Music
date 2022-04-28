@@ -1,16 +1,19 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-    {% include 'Music/_button_genre.html.twig' %}
+	{% include 'Music/_button_genre.html.twig' %}
 	<main class="container">
 		<div class="row justify-content-around">
 			{% for musical in musics %}
-				<div class="card-{{ musical.genre_name }} mb-5" id="card-music-genre">
-					<h5 class="card-title">{{ musical.title }}</h5>
-					<h6 class="card-subtitle mb-2 text-muted">By
-						{{ musical.author}}</h6>
+				<div class="d-inline-flex p-2 bd-highlight card-{{ musical.genre_name }} mb-5" style="width: 20rem">
+					<img class="align-self-center rounded-circle" src="{{ musical.music_image}}" alt="" width="80" height="80"/>
+					<div class="m-2 align-self-center">
+						<h5 class="card-title">{{ musical.title }}</h5>
+						<h6 class="card-subtitle mb-2 text-muted">By
+							{{ musical.author}}</h6>
 						<a href="music/player?id={{ musical.id }}" class="card-link">Link player</a>
-				</div>		
-			{% endfor %}	
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</main>
 {% endblock %}
