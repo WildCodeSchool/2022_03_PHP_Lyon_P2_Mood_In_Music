@@ -1,27 +1,44 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<main class="container">
-    <h1 class="text-center mt-5 mb-5"> La musique élue par nos utilisateurs est : </h1>
-	<div class="group justify-content-around mt-5 mb-5">
-		<img src="/assets/images/etoile.jpg" alt="Etoiles" width="60px">
-		<img src="/assets/images/etoile.jpg" alt="Etoiles" width="60px">
-		<img src="/assets/images/etoile.jpg" alt="Etoiles" width="60px">
-		<img src="/assets/images/etoile.jpg" alt="Etoiles" width="60px">
-		<img src="/assets/images/etoile.jpg" alt="Etoiles" width="60px">
-	</div>
-		<div class="list-group align-items-center">
-			{% for vote in votes %}
-				<div class="d-inline-flex p-2 bd-highlight card-{{ vote.genre_name }} mb-5" style="width: 20rem">
-					<img class="align-self-center rounded-circle" src="{{ vote.music_image}}" alt="" width="80" height="80"/>
-					<div class="m-2 align-self-center">
-						<h5 class="card-title">{{ vote.title }}</h5>
-						<h6 class="card-subtitle mb-2 text-muted">By
-							{{ vote.author}}</h6>
-						<a href="music/player?id={{ vote.id }}" class="card-link">Link player</a>
+	<main class="container">
+		<h1 class="text-center mt-5 mb-5">
+			La musique élue, que vous avez choisis comme meilleure musique pour la période
+		</h1>
+		<img src="../../../assets/images/artifice.gif" alt="Feu d\'artifice" class="img-fluid d-block mx-auto mb-5">
+
+		<div class="d-flex mx-auto justify-content-around">
+			<div class="d-flex flex-column">
+				<img src="../../../assets/images/medal_1.png" alt="Medaille n°1" class="figure-img img-fluid mb-3" width="90rem">
+
+				<img src="../../../assets/images/medal_2.png" alt="Medaille n°2" class="figure-img img-fluid mb-3" width="90rem">
+
+				<img src="../../../assets/images/medal_3.png" alt="Medaille n°3" class="figure-img img-fluid mb-3" width="90rem">
+			</div>
+
+			<div class="list-group d-flex">
+				{% for vote in votes %}
+					<div class="d-flex flex-row">
+						<p class="p-5">
+							avec
+							{{ vote.old_number_vote }}
+							votes</p>
+
+						<div class="d-inline-flex p-2 bd-highlight card-{{ vote.genre_name }} mb-5" style="width: 20rem">
+							<img class="align-self-center rounded-circle" src="{{ vote.music_image}}" alt="" width="80" height="80"/>
+							<div class="m-2 align-self-center">
+								<h5 class="card-title">{{ vote.title }}</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									by
+									{{ vote.author}}</h6>
+								<a href="player?id={{ vote.id }}" class="card-link">Link player</a>
+							</div>
+						</div>
 					</div>
-				</div>
-			{% endfor %}
-	</div>
-</main>
+				{% endfor %}
+			</div>
+		</div>
+		<p class="text-center mt-5 mb-5">
+			A très vite pour le prochain vote ...</p>
+	</main>
 {% endblock %}

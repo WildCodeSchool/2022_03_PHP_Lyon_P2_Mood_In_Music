@@ -94,6 +94,7 @@ class MusicController extends AbstractController
             echo "Id non valide";
         }
     }
+
     public function player(int $id)
     {
         $musicManager =  new MusicManager();
