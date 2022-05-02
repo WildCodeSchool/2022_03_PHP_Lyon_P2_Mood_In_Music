@@ -193,6 +193,6 @@ li {
     animation-name: slide-in-left;
 }
 
-@keyframes slide-in-left {
-    
+.imgwrapper{
+    width: 10rem;
 }
