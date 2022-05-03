@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Model\LoginManager;
 use App\Model\MusicManager;
 
 class MusicController extends AbstractController
@@ -14,8 +13,12 @@ class MusicController extends AbstractController
     {
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
-
-        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics]);
+        if (isset($_COOKIE['hasVoted'])) {
+            $hasVoted = $_COOKIE['hasVoted'];
+        } else {
+            $hasVoted = false;
+        }
+        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics, 'hasVoted' => $hasVoted]);
     }
 
     public function index(): string
