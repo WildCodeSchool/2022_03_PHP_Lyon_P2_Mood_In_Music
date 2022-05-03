@@ -23,37 +23,10 @@
             <td>{{music.genre_name}}</td>
             <td><img width="70px" class="mt-2" src="{{music.music_image}}"></td>
             <td><button type="button" class="btn btn-light mt-2"><a href="admin/edit?id={{music.id}}">Modifier</a></button></td>
-            <td><button type="button" id="buttonDelete" onclick="javascript:showAlert();" class="btn btn-danger mt-2"><a href="admin/delete?id={{music.id}}">Supprimer</a></button></td>
+            <td><button type="button" onclick="return confirm('Voulez-vous vraiment supprimer cette musique ?')" class="btn btn-danger mt-2"><a href="admin/delete?id={{music.id}}">Supprimer</a></button></td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 </main> 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-
-/*const buttonDelete = document.getElementById('buttonDelete');
-buttonDelete.onclick = showAlert();*/
-
-function showAlert(){
-    swal({
-            title: "Etes-vous sur de vouloir supprimer cette musique ?",
-            text: "Cette action est irréversible",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-            swal("Votre musique a bien été supprimée", {
-                icon: "success",
-            });
-            } else {
-            swal("Ok votre musique ne sera pas supprimée");
-        }
-    });
-}
-
-
-</script>
 {% endblock %}

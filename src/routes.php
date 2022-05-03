@@ -21,4 +21,5 @@ return [
     'admin/show' => ['MusicController', 'show', ['id']],
     'admin/add' => ['MusicController', 'add',],
     'admin/delete' => ['MusicController', 'delete',],
+    'admin/confirmdelete' => ['MusicController', 'delete'],
 ];

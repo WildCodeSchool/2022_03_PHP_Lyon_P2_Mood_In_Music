@@ -191,3 +191,8 @@ li {
 #card-music-genre{
     width: 20rem;
 }
+
+#dropdownMenuButton1{
+    background-color: var(--background-dark);
+    color: var(--color-light);
+}
