@@ -8,27 +8,27 @@
 		<img src="../../../assets/images/artifice.gif" alt="Feu d\'artifice" class="img-fluid d-block mx-auto mb-5">
 
 				<div class="text-center">
-
 					{% for vote in votes %}
-						<p class="mb-5">
+						<p class="text-center">
 							Avec {{ vote.old_number_vote }} voix
 						</p>
-						<div class="d-md-flex-column-p-5">
-						<div class="d-inline-flex p-2 bd-highlight card-{{ vote.genre_name }}" style="width: 20rem">
-							<img class="align-self-center rounded-circle" src="{{ vote.music_image}}" alt="" width="80" height="80"/>
-							<div class="m-2 align-self-center">
-								<h5 class="card-title">{{ vote.title}}</h5>
-								<h6 class="card-subtitle mb-2 text-muted"> by {{ vote.author}}</h6>
-								<a href="player?id={{ vote.id}}" class="card-link">Link player</a>
+						<div class="medal-md">
+							<div class="d-inline-flex p-2 bd-highlight card-{{ vote.genre_name }}" style="width: 20rem">
+								<img class="align-self-center rounded-circle" src="{{ vote.music_image}}" alt="" width="80" height="80"/>
+								<div class="m-2 align-self-center">
+									<h5 class="card-title">{{ vote.title}}</h5>
+									<h6 class="card-subtitle mb-2 text-muted"> by {{ vote.author}}</h6>
+									<a href="player?id={{ vote.id}}" class="card-link">Link player</a>
+								</div>
 							</div>
-						</div>
-						
-						<img src="../../../assets/images/medal_{{ loop.index }}.png" alt="Medaille" class="figure-img mb-5" width="100rem">
+							
+							<img src="../../../assets/images/medal_{{ loop.index }}.png" alt="Medaille" class="figure-img mb-5">
 						<div>
 					{% endfor %}
 				</div>
 
-		<p class="text-center mt-5 mb-5">
-			A très vite pour le prochain vote ...</p>
+		<p class="">
+			A très vite pour le prochain vote ...
+		</p>
 	</main>
 {% endblock %}
