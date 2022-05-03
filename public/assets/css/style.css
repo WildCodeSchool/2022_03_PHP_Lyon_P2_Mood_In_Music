@@ -184,6 +184,20 @@ li {
 #card_player {
     width: 80%;
 }
+
 #form-label-password {
     width: max-content;
 }
+
+#music-card {
+    width: 20rem;
+}
+
+#thumb {
+    width: 1.5rem;
+}
+
+#music-footcard {
+    width: 200px;
+}
+
