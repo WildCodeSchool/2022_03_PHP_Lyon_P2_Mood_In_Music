@@ -189,7 +189,7 @@ li {
     width: max-content;
 }
 
-#music-card {
+#music-card-pop, #music-card-cinematic, #music-card-electro, #music-card-world, #music-card-ambient, #music-card-chillout {
     width: 20rem;
 }
 
@@ -201,3 +201,8 @@ li {
     width: 200px;
 }
 
+#all {
+    height: 3rem;
+    width: 10rem;
+    background-color: var(--background-dark);
+}
