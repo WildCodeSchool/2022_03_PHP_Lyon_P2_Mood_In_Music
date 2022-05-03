@@ -159,14 +159,6 @@ html {
     width: 100%;
 }
 
-p {
-    color: var(--color-light);
-}
-
-label {
-    width: 162px;
-}
-
 li {
     text-align: center;
     height: 3rem;
@@ -194,20 +186,10 @@ li {
     animation-name: slide-in-left;
 }
 
-.imgwrapper{
-    width: 10rem;
-}
-
-.medal-md{
-    display: flex;;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
 .figure-img{
-    width: 6rem
+    width: 6rem;
 }
+
 #music-card {
     width: 20rem;
 }
