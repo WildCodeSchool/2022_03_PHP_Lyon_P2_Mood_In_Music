@@ -189,6 +189,14 @@ li {
     width: max-content;
 }
 
+#card-music-genre{
+    width: 20rem;
+}
+
+#dropdownMenuButton1{
+    background-color: var(--background-dark);
+    color: var(--color-light);
+}
 #music-card {
     width: 20rem;
 }

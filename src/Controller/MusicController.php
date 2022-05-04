@@ -85,14 +85,15 @@ class MusicController extends AbstractController
         return $this->twig->render('Admin/add.html.twig', ['genres' => $genres]);
     }
 
-    public function delete(): void
+    public function delete()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET' && is_numeric($_GET['id'])) {
             $id = trim($_GET['id']);
             $musicManager = new MusicManager();
             $musicManager->delete((int)$id);
+            $message = "La musique a bien été supprimée !";
 
-            header('Location:/admin');
+            return $this->twig->render('Admin/confirmdelete.html.twig', ['message' => $message]);
         } elseif (!is_numeric($_GET['id'])) {
             echo "Id non valide";
         }
