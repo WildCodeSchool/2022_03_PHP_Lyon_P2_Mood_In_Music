@@ -17,11 +17,11 @@
             <input type="text" name="source" id="source" value="{{music.source}}" class="form-control" required>
         </p>
 		<p>
-            <label for="musical_genre_id" class="form-label m-1">Genre : {{music.genre_name}}</label>
+            <label for="musical_genre_id" class="form-label m-1">Genre :</label>
             <select name="musical_genre_id" id="musical_genre_id" value="{{music.musical_genre_id}}" class="form-control" required>
-                <option value="{{genre.id}}">Select genre : </option>
+                <option value="{{music.musical_genre_id}}"> Genre sélectionné : {{music.genre_name}} </option>
                 {% for genre in genres %}
-                    <option value="{{genre.id}}">{{genre.genre_name}}</option> 
+                    <option value="{{genre.id}}"> {{genre.genre_name}}</option> 
                 {% endfor %}
             </select>
         </p>
