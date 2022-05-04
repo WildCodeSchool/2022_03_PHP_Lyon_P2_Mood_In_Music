@@ -7,10 +7,10 @@ use DateTime;
 
 class VoteController extends AbstractController
 {
-    public function showVote(): string
+    public function showVote(int $genreId)
     {
         $voteManager = new VoteManager();
-        $votes = $voteManager->selectVoteById();
+        $votes = $voteManager->selectVoteById($genreId);
 
         return $this->twig->render('Music/showVote.html.twig', ['votes' => $votes]);
     }
