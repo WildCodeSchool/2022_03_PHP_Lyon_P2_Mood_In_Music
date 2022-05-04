@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'LEMONMILK';
+    src: url("../police/LEMONMILK-Medium.otf");
+}
+
 :root {
     --background-dark: #333232;
     --color-light: white;
@@ -102,6 +107,7 @@ body {
 
 h1 {
     color: var(--color-light);
+    font-family: 'LEMONMILK', sans-serif;
 }
 
 a {
@@ -112,6 +118,15 @@ a {
 .btn_list {
     height: 8rem;
     width: 8rem;
+    font-family: 'LEMONMILK', sans-serif;
+}
+
+h5 {
+    font-family: 'LEMONMILK', sans-serif;
+}
+
+.navbar {
+    font-family: 'LEMONMILK', sans-serif;
 }
 
 .dropdown-menu a {
