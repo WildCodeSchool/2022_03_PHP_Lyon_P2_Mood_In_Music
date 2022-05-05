@@ -2,8 +2,8 @@
 
 namespace App\Model;
 
-use App\Model\Connection;
 use PDO;
+use App\Model\Connection;
 
 /**
  * Abstract class handling default manager.
