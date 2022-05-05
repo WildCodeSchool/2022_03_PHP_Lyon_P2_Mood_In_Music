@@ -97,7 +97,7 @@ body {
 }
 
 .navbar-collapse {
-    flex: none;
+    flex-grow: unset;
 }
 
 h1 {
@@ -119,7 +119,7 @@ a {
     color: white;
 }
 
-.dropdown-menu a {
+.dropdown-menu button {
     height: 100%;
     font-size: 1.5rem;
 }
@@ -203,8 +203,7 @@ li {
     background-color: var(--background-dark);
     color: var(--color-light);
 }
-
-#music-card {
+#music-card-pop, #music-card-cinematic, #music-card-electro, #music-card-world, #music-card-ambient, #music-card-chillout {
     width: 20rem;
 }
 
@@ -214,6 +213,15 @@ li {
 
 #music-footcard {
     width: 200px;
+}
+
+#all {
+    background-color: rgb(185, 202, 209);
+}
+
+.all-desktop {
+    height: 3rem;
+    width: 10rem;
 }
 
 .video_fire{
