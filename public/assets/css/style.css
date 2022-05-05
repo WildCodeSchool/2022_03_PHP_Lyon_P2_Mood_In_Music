@@ -123,6 +123,8 @@ a {
 
 h5 {
     font-family: 'LEMONMILK', sans-serif;
+    font-size: small;
+    color: var(--color-dark);
 }
 
 .navbar {
