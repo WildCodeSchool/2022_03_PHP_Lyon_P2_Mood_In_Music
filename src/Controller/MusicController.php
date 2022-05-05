@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\MusicManager;
+use DateTime;
 
 class MusicController extends AbstractController
 {
@@ -13,12 +14,20 @@ class MusicController extends AbstractController
     {
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
+        $currentDate = new DateTime('now');
+        $endDate = '06-05-2022 11:00:00';
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {
             $hasVoted = false;
         }
-        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics, 'hasVoted' => $hasVoted]);
+        return $this->twig->render(
+            'Home/listAll.html.twig',
+            ['musics' => $musics,
+             'hasVoted' => $hasVoted,
+             'currentDate' => $currentDate,
+             'endDate' => $endDate]
+        );
     }
 
     public function index(): string
