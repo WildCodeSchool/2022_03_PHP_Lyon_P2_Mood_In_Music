@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+	<main class="container">
+		<h1 class="text-center mt-5 mb-5">
+			Les meilleures musiques du mois
+		</h1>
+		<div class="d-md-none">
+			<img src="../../../assets/images/artifice.gif" alt="Feu d\'artifice" class="img-fluid d-block mx-auto mb-5">
+		</div>
+		<div class="d-none d-md-block mb-5">
+			<video class="video_fire" controls autoplay loop muted="Fire">
+				<source src="../../../assets/video/Fire.mp4">
+				<source src="../../../assets/video/Fire.webm">
+			</video>
+		</div>
+		<div class="text-center">
+			{% for vote in votes %}
+				<p class="text-center mb-5">
+					Avec {{ vote.old_number_vote }} voix
+				</p>						
+				<div class="medal d-md-flex flex-row justify-content-evenly align-items-start">							
+					<div class="d-inline-flex p-2 bd-highlight card-{{ vote.genre_name }}" style="width: 20rem">
+						<img class="align-self-center rounded-circle" src="{{ vote.music_image }}" alt="" width="80" height="80"/>
+						<div class="m-2 align-self-center">
+							<h5 class="card-title">{{ vote.title}}</h5>
+							<h6 class="card-subtitle mb-2 text-muted"> by {{ vote.author }}</h6>
+							<a href="player?id={{ vote.id }}" class="card-link">Link player</a>
+						</div>
+					</div>							
+					<img src="../../../assets/images/medal_{{ loop.index }}.png" alt="Medaille" class="figure-img mb-5">		
+				</div>
+			{% endfor %}
+		</div>
+		<p class="text-center mt-5 mb-5">
+		A très vite pour le prochain vote ...
+		</p>
+	</main>
+{% endblock %}

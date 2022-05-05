@@ -23,5 +23,6 @@ return [
     'admin/show' => ['MusicController', 'show', ['id']],
     'admin/add' => ['MusicController', 'add',],
     'admin/delete' => ['MusicController', 'delete',],
+    'music/vote' => ['VoteController', 'showVote', ['id']],
     'admin/confirmdelete' => ['MusicController', 'delete'],
 ];
