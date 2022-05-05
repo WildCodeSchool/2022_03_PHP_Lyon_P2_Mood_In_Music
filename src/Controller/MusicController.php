@@ -13,8 +13,12 @@ class MusicController extends AbstractController
     {
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
-
-        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics]);
+        if (isset($_COOKIE['hasVoted'])) {
+            $hasVoted = $_COOKIE['hasVoted'];
+        } else {
+            $hasVoted = false;
+        }
+        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics, 'hasVoted' => $hasVoted]);
     }
 
     public function index(): string
@@ -81,18 +85,20 @@ class MusicController extends AbstractController
         return $this->twig->render('Admin/add.html.twig', ['genres' => $genres]);
     }
 
-    public function delete(): void
+    public function delete()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET' && is_numeric($_GET['id'])) {
             $id = trim($_GET['id']);
             $musicManager = new MusicManager();
             $musicManager->delete((int)$id);
+            $message = "La musique a bien été supprimée !";
 
-            header('Location:/admin');
+            return $this->twig->render('Admin/confirmdelete.html.twig', ['message' => $message]);
         } elseif (!is_numeric($_GET['id'])) {
             echo "Id non valide";
         }
     }
+
     public function player(int $id)
     {
         $musicManager =  new MusicManager();

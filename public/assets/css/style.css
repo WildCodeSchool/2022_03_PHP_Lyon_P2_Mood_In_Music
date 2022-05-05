@@ -159,14 +159,6 @@ html {
     width: 100%;
 }
 
-p {
-    color: var(--color-light);
-}
-
-label {
-    width: 162px;
-}
-
 li {
     text-align: center;
     height: 3rem;
@@ -184,6 +176,40 @@ li {
 #card_player {
     width: 80%;
 }
+
 #form-label-password {
     width: max-content;
+}
+
+.list-group{
+    animation-delay: 200ms;
+    animation-name: slide-in-left;
+}
+
+.figure-img{
+    width: 6rem;
+}
+
+#card-music-genre{
+    width: 20rem;
+}
+
+#dropdownMenuButton1{
+    background-color: var(--background-dark);
+    color: var(--color-light);
+}
+#music-card {
+    width: 20rem;
+}
+
+#thumb {
+    width: 1.5rem;
+}
+
+#music-footcard {
+    width: 200px;
+}
+
+.video_fire{
+    width: 100%;
 }

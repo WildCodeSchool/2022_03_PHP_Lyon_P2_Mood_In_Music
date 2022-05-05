@@ -43,6 +43,5 @@ class VoteController extends AbstractController
         $musicManager->movesVotesInDB();
 
         header("Location: /admin/vote");
-        return null;
     }
 }
