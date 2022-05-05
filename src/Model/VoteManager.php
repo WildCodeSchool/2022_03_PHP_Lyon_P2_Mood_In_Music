@@ -9,7 +9,7 @@ class VoteManager extends AbstractManager
 
     public function selectVoteById($genreId)
     {
-        if ($genreId == 6) {
+        if ($genreId == 7) {
             $query = 'SELECT ' . self::TABLE . '.id, title, author, source, music_image, old_number_vote,'
             . self::JOINED_TABLE . '.genre_name
             FROM ' . self::TABLE . '

@@ -1,6 +1,42 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-	{% include 'Music/_button_genre.html.twig' %}
+	<div class="container-fluid text-center">
+		<h1 class="d-none d-sm-block text-center mt-5 mb-5">MOOD IN MUSIC</h1>
+		<button type="button" id="all" class="d-none d-sm-inline-block all-desktop btn-primary rounded-circle"><a href="vote?id=7">TOUS LES GENRES</a></button>
+		<div class="d-none d-md-flex justify-content-evenly m-5 btn-group-lg row gy-3" role="group" aria-label="Un groupe de boutons" width="10rem;" height="3rem;">
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-primary rounded-circle"><a href="vote?id=1">POP</a></button>
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-secondary rounded-circle"><a href="vote?id=2">CINEMATIC</a></button>
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-success rounded-circle"><a href="vote?id=3">ELECTRO</a></button>
+
+			<div class="w-100 h-50 d-lg-none"></div>
+
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-dark rounded-circle"><a href="vote?id=4">WORLD</a></button>
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-warning rounded-circle"><a href="vote?id=5">CHILLOUT</a></button>
+			<button type="button"
+			class="btn_list col-md-4 col-lg-2 flex-shrink-0 btn-info rounded-circle"><a href="vote?id=6">AMBIENT</a></button>
+		</div>
+	</div> 
+
+	<div class="dropdown">
+		<button class="d-md-none btn btn-light dropdown-toggle mb-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+			Select your music genre here
+		</button>
+		<ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+			<li><button class="dropdown-item btn-primary" id="all"><a href="vote?id=7">TOUS LES GENRES</a></button></li>
+			<li><button class="dropdown-item btn-primary"><a href="vote?id=1">POP</a></button></li>
+			<li><button class="dropdown-item btn-secondary"><a href="vote?id=2">CINEMATIC</a></button></li>
+			<li><button class="dropdown-item btn-success"><a href="vote?id=3">ELECTRO</a></button></li>
+			<li><button class="dropdown-item btn-dark"><a href="vote?id=4">WORLD</a></button></li>
+			<li><button class="dropdown-item btn-warning"><a href="vote?id=5">CHILLOUT</a></button></li>
+			<li><button class="dropdown-item btn-info"><a href="vote?id=6">AMBIENT</a></button></li>
+		</ul>
+	</div>
+
 	<main class="container">
 		<h1 class="text-center mt-5 mb-5">
 			Les meilleures musiques du mois
