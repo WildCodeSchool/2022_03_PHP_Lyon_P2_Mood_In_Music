@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Model\VoteManager;
-use DateTime;
 
 class VoteController extends AbstractController
 {
