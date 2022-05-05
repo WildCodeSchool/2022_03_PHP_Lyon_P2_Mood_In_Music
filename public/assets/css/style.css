@@ -159,14 +159,6 @@ html {
     width: 100%;
 }
 
-p {
-    color: var(--color-light);
-}
-
-label {
-    width: 162px;
-}
-
 li {
     text-align: center;
     height: 3rem;
@@ -189,6 +181,15 @@ li {
     width: max-content;
 }
 
+.list-group{
+    animation-delay: 200ms;
+    animation-name: slide-in-left;
+}
+
+.figure-img{
+    width: 6rem;
+}
+
 #card-music-genre{
     width: 20rem;
 }
@@ -209,3 +210,6 @@ li {
     width: 200px;
 }
 
+.video_fire{
+    width: 100%;
+}
