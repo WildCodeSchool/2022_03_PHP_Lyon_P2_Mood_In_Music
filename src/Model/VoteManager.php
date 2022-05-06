@@ -39,19 +39,20 @@ class VoteManager extends AbstractManager
     public function selectVoteById($genreId)
     {
         if ($genreId == 7) {
-            $query = 'SELECT ' . self::TABLE . '.id, title, author, source, music_image, old_number_vote,'
+            $query = 'SELECT ' . self::TABLE . '.id, title, author, source, music_image, number_vote, '
             . self::JOINED_TABLE . '.genre_name
             FROM ' . self::TABLE . '
             INNER JOIN ' . self::JOINED_TABLE . ' ON ' . self::TABLE . '.musical_genre_id=' . self::JOINED_TABLE . '.id
-            ORDER BY old_number_vote DESC
+            WHERE number_vote IS NOT NULL
+            ORDER BY number_vote DESC
             LIMIT 0,3;';
         } else {
-            $query = 'SELECT ' . self::TABLE . '.id, title, author, source, music_image, old_number_vote,'
+            $query = 'SELECT ' . self::TABLE . '.id, title, author, source, music_image, number_vote, '
             . self::JOINED_TABLE . '.genre_name
             FROM ' . self::TABLE . '
             INNER JOIN ' . self::JOINED_TABLE . ' ON ' . self::TABLE . '.musical_genre_id=' . self::JOINED_TABLE . '.id
-            WHERE ' . self::TABLE . '.musical_genre_id=' . $genreId . ' 
-            ORDER BY old_number_vote DESC
+            WHERE ' . self::TABLE . '.musical_genre_id=' . $genreId . ' AND number_vote IS NOT NULL 
+            ORDER BY number_vote DESC
             LIMIT 0,3;';
         }
         return $this->pdo->query($query)->fetchAll();
