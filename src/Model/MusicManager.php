@@ -80,4 +80,16 @@ class MusicManager extends AbstractManager
         $statement->bindValue('music_image', $music['music_image'], \PDO::PARAM_STR);
         return $statement->execute();
     }
+
+    /**
+     * Moves data from `number_vote` to `old_number_vote`
+     */
+    public function movesVotesInDB()
+    {
+        $update = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `old_number_vote` = `number_vote`");
+        $update->execute();
+        $delete = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `number_vote` = NULL 
+        WHERE `number_vote` IS NOT NULL");
+        $delete->execute();
+    }
 }
