@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\MusicManager;
+use App\Model\VoteManager;
 use DateTime;
 
 class MusicController extends AbstractController
@@ -14,8 +15,10 @@ class MusicController extends AbstractController
     {
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
+        $voteManager = new VoteManager();
+        $dates = $voteManager->selectAllDates();
         $currentDate = new DateTime('now');
-        $endDate = '06-05-2022 11:00:00';
+        $endDate = $dates['end_date'];
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {

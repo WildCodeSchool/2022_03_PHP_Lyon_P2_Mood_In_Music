@@ -17,8 +17,10 @@ class VoteController extends AbstractController
     {
         $voteManager = new VoteManager();
         $dates = $voteManager->selectAllDates();
+        $currentDate = new DateTime('now');
+        $currentDate = $currentDate->format('Y-m-d H:i:s');
 
-        return $this->twig->render('Admin/vote.html.twig', ['dates' => $dates]);
+        return $this->twig->render('Admin/vote.html.twig', ['dates' => $dates , 'currentDate' => $currentDate]);
     }
 
     /**
