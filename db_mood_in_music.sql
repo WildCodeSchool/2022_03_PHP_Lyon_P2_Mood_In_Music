@@ -3,6 +3,7 @@ USE db_mood_in_music;
 DROP TABLE music;
 DROP TABLE musical_genre;
 DROP TABLE user;
+DROP TABLE dates;
 
 
 SHOW tables;
@@ -21,6 +22,15 @@ CREATE TABLE IF NOT EXISTS `db_mood_in_music`.`musical_genre` (
   `genre_name` VARCHAR(45) NOT NULL,
   `image` BLOB,
   PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `dates`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `dates` (
+`id` INT AUTO_INCREMENT PRIMARY KEY,
+`start_date` DATETIME NOT NULL,
+`end_date` DATETIME)
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
