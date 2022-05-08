@@ -51,8 +51,8 @@ class MusicManager extends AbstractManager
      */
     public function insert(array $music): int
     {
-        $query = 'INSERT INTO ' . self::TABLE . '(`title`,`author`,`source`,`musical_genre_id`, `music_image`) 
-        VALUES (:title, :author, :source, :musical_genre_id, :music_image)';
+        $query = 'INSERT INTO ' . self::TABLE . '(`title`,`author`,`source`,`musical_genre_id`, `music_image`, `number_vote`) 
+        VALUES (:title, :author, :source, :musical_genre_id, :music_image, 0)';
         $statement = $this->pdo->prepare($query);
         $statement->bindValue('title', $music['title'], \PDO::PARAM_STR);
         $statement->bindValue('author', $music['author'], \PDO::PARAM_STR);

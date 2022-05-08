@@ -19,7 +19,6 @@ class MusicController extends AbstractController
         $dates = $voteManager->selectAllDates();
         $currentDate = new DateTime('now');
         $currentDate->format('Y-m-d H:i:s');
-        $endDate = $dates['end_date'];
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {
@@ -30,7 +29,7 @@ class MusicController extends AbstractController
             ['musics' => $musics,
              'hasVoted' => $hasVoted,
              'currentDate' => $currentDate,
-             'endDate' => $endDate]
+             'dates' => $dates]
         );
     }
 
