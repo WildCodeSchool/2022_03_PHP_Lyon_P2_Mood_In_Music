@@ -89,8 +89,7 @@ class MusicManager extends AbstractManager
     {
         $update = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `old_number_vote` = `number_vote`");
         $update->execute();
-        $delete = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `number_vote` = NULL 
-        WHERE `number_vote` IS NOT NULL");
+        $delete = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `number_vote` = 0 ");
         $delete->execute();
     }
 }
