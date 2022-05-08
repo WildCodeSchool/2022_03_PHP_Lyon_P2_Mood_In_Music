@@ -49,8 +49,12 @@ class VoteController extends AbstractController
     {
         $voteManager = new VoteManager();
         $votes = $voteManager->selectVoteById($genreId);
+        $allSelected = false;
+        if ($genreId === 7) {
+            $allSelected = true;
+        }
 
-        return $this->twig->render('Music/showVote.html.twig', ['votes' => $votes]);
+        return $this->twig->render('Music/showVote.html.twig', ['votes' => $votes, 'allSelected' => $allSelected]);
     }
 
     public function addVote(int $id)
