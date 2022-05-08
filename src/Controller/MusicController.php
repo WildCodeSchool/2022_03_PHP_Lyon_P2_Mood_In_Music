@@ -18,7 +18,7 @@ class MusicController extends AbstractController
         $voteManager = new VoteManager();
         $dates = $voteManager->selectAllDates();
         $currentDate = new DateTime('now');
-        $currentDate->format('Y-m-d H:i:s');
+        //$currentDate->format('Y-m-d H:i:s');
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {
