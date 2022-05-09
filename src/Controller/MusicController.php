@@ -17,8 +17,6 @@ class MusicController extends AbstractController
         $musics = $musicManager->selectAllList();
         $voteManager = new VoteManager();
         $dates = $voteManager->selectAllDates();
-        $currentDate = new DateTime('now');
-        //$currentDate->format('Y-m-d H:i:s');
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {
@@ -28,7 +26,6 @@ class MusicController extends AbstractController
             'Home/listAll.html.twig',
             ['musics' => $musics,
              'hasVoted' => $hasVoted,
-             'currentDate' => $currentDate,
              'dates' => $dates]
         );
     }

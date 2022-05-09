@@ -47,12 +47,12 @@ class VoteController extends AbstractController
         header("Location: /admin/vote");
     }
 
-    public function showVote(int $genreId)
+    public function showVote(int $genreId = null)
     {
         $voteManager = new VoteManager();
         $votes = $voteManager->selectVoteById($genreId);
         $allSelected = false;
-        if ($genreId === 7) {
+        if ($genreId == null) {
             $allSelected = true;
         }
 
