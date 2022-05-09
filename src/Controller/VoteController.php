@@ -13,8 +13,12 @@ class VoteController extends AbstractController
     /**
      * Displays home page
      */
-    public function index(): string
+    public function index(): ?string
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         $voteManager = new VoteManager();
         $dates = $voteManager->selectAllDates();
         $currentDate = new DateTime('now');
@@ -28,6 +32,10 @@ class VoteController extends AbstractController
      */
     public function launchVote()
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         //getting the time of the click
         $startDate = new DateTime('now');
         //calculation of the end_date
