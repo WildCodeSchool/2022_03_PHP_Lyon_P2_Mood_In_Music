@@ -248,3 +248,11 @@ li {
 .video_fire{
     width: 100%;
 }
+
+#error_message {
+    color : var(--color-dark);
+}
+
+.errors_messages {
+    color : var(--color-light);
+}

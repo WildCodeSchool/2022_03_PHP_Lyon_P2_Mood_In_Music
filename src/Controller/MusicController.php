@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\MusicManager;
 use App\Model\VoteManager;
+use App\Service\MusicService;
 use DateTime;
 
 class MusicController extends AbstractController
@@ -66,23 +67,29 @@ class MusicController extends AbstractController
         $musicManager = new MusicManager();
         $music = $musicManager->selectOneById($id);
 
+        $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $music = array_map('trim', $_POST);
 
+            $musicService = new MusicService();
+            $errors = $musicService->checkFields($music);
+
             // if validation is ok, update and redirection
-            $musicManager->update($music);
+            if (empty($errors)) {
+                $musicManager->update($music);
 
-            header('Location: /admin/show?id=' . $id);
-
-            return null;
+                header('Location: /admin/show?id=' . $id);
+                return null;
+            }
         }
 
         $musicManager = new MusicManager();
         $music = $musicManager->selectOneById($id);
         return $this->twig->render('Admin/edit.html.twig', [
             'music' => $music,
-            'genres' => $genres
+            'genres' => $genres,
+            'errors' => $errors
         ]);
     }
 
@@ -95,19 +102,25 @@ class MusicController extends AbstractController
         $musicManager = new MusicManager();
         $genres = $musicManager->selectAllGenre();
 
+        $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $music = array_map('trim', $_POST);
 
-            // if validation is ok, insert and redirection
-            $musicManager = new MusicManager();
-            $id = $musicManager->insert($music);
+            $musicService = new MusicService();
+            $errors = $musicService->checkFields($music);
 
-            header('Location:/admin/show?id=' . $id);
-            return null;
+            // if validation is ok, insert and redirection
+            if (empty($errors)) {
+                $musicManager = new MusicManager();
+                $id = $musicManager->insert($music);
+
+                header('Location:/admin/show?id=' . $id);
+                return null;
+            }
         }
 
-        return $this->twig->render('Admin/add.html.twig', ['genres' => $genres]);
+        return $this->twig->render('Admin/add.html.twig', ['genres' => $genres, 'errors' => $errors]);
     }
 
     public function delete()
