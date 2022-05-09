@@ -137,6 +137,10 @@ p {
     color: var(--color-light);
 }
 
+#error_message {
+    color: var(--color-black);
+}
+
 label {
     width: 162px;
 }
