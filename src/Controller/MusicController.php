@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Model\MusicManager;
+use App\Model\VoteManager;
+use DateTime;
 
 class MusicController extends AbstractController
 {
@@ -13,24 +15,39 @@ class MusicController extends AbstractController
     {
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
+        $voteManager = new VoteManager();
+        $dates = $voteManager->selectAllDates();
         if (isset($_COOKIE['hasVoted'])) {
             $hasVoted = $_COOKIE['hasVoted'];
         } else {
             $hasVoted = false;
         }
-        return $this->twig->render('Home/listAll.html.twig', ['musics' => $musics, 'hasVoted' => $hasVoted]);
+        return $this->twig->render(
+            'Home/listAll.html.twig',
+            ['musics' => $musics,
+             'hasVoted' => $hasVoted,
+             'dates' => $dates]
+        );
     }
 
-    public function index(): string
+    public function index(): ?string
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         $musicManager = new MusicManager();
         $musics = $musicManager->selectAllList();
 
         return $this->twig->render('Admin/index.html.twig', ['musics' => $musics]);
     }
 
-    public function show(int $id): string
+    public function show(int $id): ?string
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         $musicManager = new MusicManager();
         $music = $musicManager->selectOneById($id);
 
@@ -39,6 +56,10 @@ class MusicController extends AbstractController
 
     public function edit(int $id): ?string
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         $musicManager = new MusicManager();
         $genres = $musicManager->selectAllGenre();
 
@@ -67,6 +88,10 @@ class MusicController extends AbstractController
 
     public function add(): ?string
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         $musicManager = new MusicManager();
         $genres = $musicManager->selectAllGenre();
 
@@ -87,6 +112,10 @@ class MusicController extends AbstractController
 
     public function delete()
     {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /");
+            return null;
+        }
         if ($_SERVER['REQUEST_METHOD'] === 'GET' && is_numeric($_GET['id'])) {
             $id = trim($_GET['id']);
             $musicManager = new MusicManager();
