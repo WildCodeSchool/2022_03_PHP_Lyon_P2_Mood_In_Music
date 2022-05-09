@@ -51,8 +51,9 @@ class MusicManager extends AbstractManager
      */
     public function insert(array $music): int
     {
-        $query = 'INSERT INTO ' . self::TABLE . '(`title`,`author`,`source`,`musical_genre_id`, `music_image`) 
-        VALUES (:title, :author, :source, :musical_genre_id, :music_image)';
+        $query = 'INSERT INTO ' . self::TABLE . '
+        (`title`,`author`,`source`,`musical_genre_id`, `music_image`, `number_vote`) 
+        VALUES (:title, :author, :source, :musical_genre_id, :music_image, 0)';
         $statement = $this->pdo->prepare($query);
         $statement->bindValue('title', $music['title'], \PDO::PARAM_STR);
         $statement->bindValue('author', $music['author'], \PDO::PARAM_STR);
@@ -88,8 +89,7 @@ class MusicManager extends AbstractManager
     {
         $update = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `old_number_vote` = `number_vote`");
         $update->execute();
-        $delete = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `number_vote` = NULL 
-        WHERE `number_vote` IS NOT NULL");
+        $delete = $this->pdo->prepare("UPDATE " . static::TABLE . " SET `number_vote` = 0 ");
         $delete->execute();
     }
 }
