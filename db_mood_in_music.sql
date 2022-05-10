@@ -1,3 +1,4 @@
+CREATE DATABASE db_mood_in_music;
 USE db_mood_in_music;
 
 DROP TABLE music;
@@ -86,7 +87,16 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_
 ('Daybreak feat Henk','Jens East',
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184041689&color=%23ff5500&auto_play=false
 &hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",1,0,0,
-"https://i1.sndcdn.com/avatars-44l49j2fXFXizBFI-IaAJ2Q-t200x200.jpg");
+"https://i1.sndcdn.com/avatars-44l49j2fXFXizBFI-IaAJ2Q-t200x200.jpg"),
+('New Beginning', 'Forrest Keller',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/986369410&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",1,0,0,
+"https://i1.sndcdn.com/artworks-4S8uRbP91gCly0NG-LhwCMg-t500x500.jpg"),
+('Go', 'Tomh',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/895329949&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",1,0,0,
+"https://i1.sndcdn.com/artworks-IiNWNDcz2VWze5dR-XxtVlA-t500x500.jpg"),
+('Not Kings', 'Candy Says',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/154775170&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",1,0,0,
+"https://i1.sndcdn.com/artworks-000082628376-2xyyt9-t500x500.jpg");
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_vote,music_image) VALUES
 ('The Epic Hero','Keys Of Moon',
@@ -108,7 +118,10 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_
 ('Winters-call','Mattias Westlund',
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233954398&color=%23ff5500&auto_play=false
 &hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",2,0,0,
-"https://i1.sndcdn.com/avatars-000178001044-4nwxke-t200x200.jpg");
+"https://i1.sndcdn.com/avatars-000178001044-4nwxke-t200x200.jpg"),
+('To The Great Beyond','Stellardrone',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162416525&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",2,0,0,
+"https://i1.sndcdn.com/artworks-000087593753-lmcmbn-t500x500.jpg");
 
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_vote,music_image) VALUES
@@ -131,7 +144,13 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_
 ('Laser Pointer','Wontolla',
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205554396&color=%23ff5500&auto_play=false
 &hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",3,0,0,
-"https://i1.sndcdn.com/avatars-iDe3sqjzZyqag9sL-a2fpzQ-t200x200.jpg");
+"https://i1.sndcdn.com/avatars-iDe3sqjzZyqag9sL-a2fpzQ-t200x200.jpg"),
+('Dystopia','Luke Hall',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/690154828&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",3,0,0,
+"https://i1.sndcdn.com/artworks-000087593753-lmcmbn-t500x500.jpg"),
+('Deflector','Ghostrifter',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/959145622&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",3,0,0,
+"https://i1.sndcdn.com/artworks-12tavWNUbQe5UCxp-9qf7QA-t500x500.jpg");
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_vote,music_image) VALUES
 ('Flame and Go','CyberSDF',
@@ -175,7 +194,16 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_
 ('Memories','Atch',
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/776397571&color=%23ff5500&auto_play=false
 &hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
-"https://i1.sndcdn.com/avatars-NHui16hl8f7mfEVC-cjxyiA-t200x200.jpg");
+"https://i1.sndcdn.com/avatars-NHui16hl8f7mfEVC-cjxyiA-t200x200.jpg"),
+('Lockdown', 'Baribal & Pold',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/803118340&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
+"https://i1.sndcdn.com/artworks-4QBRdAcxbewzY7f0-oEC7Qw-t500x500.jpg"),
+('Spark', 'Vexento',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/430468956&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
+"https://i1.sndcdn.com/artworks-000335872548-5rgukl-t500x500.jpg"),
+('Wild Waves', 'Grenada',
+"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/778410589&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
+"https://i1.sndcdn.com/artworks-xnYKsB96NWyyO3tU-dSVP3Q-t500x500.jpg");
 
 INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_vote,music_image) VALUES
 ('Overlove','John Tasoulas',

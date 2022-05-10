@@ -39,7 +39,7 @@ class VoteController extends AbstractController
         //getting the time of the click
         $startDate = new DateTime('now');
         //calculation of the end_date
-        $voteInterval = new DateInterval('PT5M');
+        $voteInterval = new DateInterval('P7D');
         $endDate = $startDate->add($voteInterval);
         //changing dates into strings
         $startDate = new DateTime('now');
@@ -72,7 +72,7 @@ class VoteController extends AbstractController
         $voteManager = new VoteManager();
         $voteMusic = $voteManager->selectOneById($id);
         $voteManager->incrementVote($voteMusic);
-        setcookie('hasVoted', 'true', (time() + 5), '/');
+        setcookie('hasVoted', 'true', (time() + 300), '/');
         header("Location: /");
         return null;
     }
