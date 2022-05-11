@@ -1,11 +1,10 @@
-CREATE DATABASE db_mood_in_music;
+CREATE DATABASE IF NOT EXISTS db_mood_in_music;
 USE db_mood_in_music;
 
-DROP TABLE music;
-DROP TABLE musical_genre;
-DROP TABLE user;
-DROP TABLE dates;
-
+DROP TABLE IF EXISTS music;
+DROP TABLE IF EXISTS musical_genre;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS dates;
 
 SHOW tables;
 -- DROP TABLE music; Si base de données déjà créée -> pour modification de la table music
@@ -179,10 +178,6 @@ INSERT INTO music (title,author,source, musical_genre_id,number_vote,old_number_
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726161599&color=%23ff5500&auto_play=false
 &hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
 "https://i1.sndcdn.com/avatars-OOUXxO5OVwbzDvBH-kxKA9A-t200x200.jpg"),
-('Naya','HaTom',
-"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660919205&color=%23ff5500&auto_play=false
-&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
-"https://i1.sndcdn.com/avatars-uOKfqPVfCMtWY1IL-aFvUbw-t200x200.jpg"),
 ('Flourish','Purrple Cat',
 "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/772063282&color=%23ff5500&auto_play=false
 &hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",5,0,0,
